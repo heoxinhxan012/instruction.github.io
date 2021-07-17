@@ -1,0 +1,140 @@
+:root {
+    --text-color: #333;
+    --black-color: #000;
+    --white-color: #fff;
+    --ping-color: #ff4f81;
+    --green-color: #12ccc3;
+    --note-color: #999;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--ping-color));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {     
+    background: linear-gradient(transparent, #12ccc3);
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Loader */
+.loader{
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(circle farthest-corner at center, #ee85a3 0%, #ff4f81 100%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000000000;
+	display: block;
+	overflow: hidden;
+}
+.icon{
+	font-size: 50px;
+	color: var(--white-color);
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -40px;
+}
+.xoay{
+	animation: xoay 1.5s linear infinite;
+	-moz-animation: xoay 1.5s linear infinite;
+	-ms-animation: xoay 1.5s linear infinite;
+	-o-animation: xoay 1.5s linear infinite;
+	-webkit-animation: xoay 1.5s linear infinite;
+}
+@keyframes xoay{
+	from{
+		-ms-transform:rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to{
+		-ms-transform:rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+
+/* reponsive */
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+/* Chia column reponsive */
+
+.grid__column-3 {
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 40%;
+}
+
+.grid__column-3-3 {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 40%;
+}
+
+.grid__column-4 {
+    width: 30%;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+
+/* Effect - hiệu ứng */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes showIn {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(40%);
+    }
+}
